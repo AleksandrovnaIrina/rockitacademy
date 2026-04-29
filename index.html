@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rockit Academy — Рекрутинг в афіліат-індустрії</title>
+  <meta name="description" content="Модуль для HR, рекрутерів і всіх, хто заходить у медіабаїнг з нуля." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="noise"></div>
+
+  <!-- ══════════ PRELOADER ══════════ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader__inner">
+      <svg class="preloader__bolt" viewBox="0 0 60 110" fill="none">
+        <path d="M38 2L8 58H28L22 108L52 52H32L38 2Z" stroke="#B5E726" stroke-width="2" stroke-linejoin="round"/>
+      </svg>
+      <div class="preloader__bar"><div class="preloader__fill" id="preloaderFill"></div></div>
+    </div>
+  </div>
+
+  <!-- ══════════ NAV ══════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav__wrap">
+      <a href="#" class="logo">
+        <svg class="logo__bolt" viewBox="0 0 28 54" fill="none">
+          <path d="M18 2L4 28H13L10 52L24 26H15L18 2Z" fill="#B5E726"/>
+        </svg>
+        <span>ROCKIT<em>.</em>ACADEMY</span>
+      </a>
+
+      <ul class="nav__links">
+        <li><a href="#about">Про нас</a></li>
+        <li><a href="#programs">Програми</a></li>
+        <li><a href="#for-whom">Для кого</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+
+      <a href="#programs" class="nav__cta">
+        <span>Почати навчання</span>
+        <svg viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+      </a>
+
+      <button class="burger" id="burger" aria-label="Меню">
+        <span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="#about" class="m-link">Про нас</a></li>
+      <li><a href="#programs" class="m-link">Програми</a></li>
+      <li><a href="#for-whom" class="m-link">Для кого</a></li>
+      <li><a href="#faq" class="m-link">FAQ</a></li>
+      <li><a href="#programs" class="btn m-link">Почати навчання →</a></li>
+    </ul>
+  </div>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero" id="home">
+
+    <div class="hero__grid-bg"></div>
+
+    <div class="hero__glow hero__glow--purple"></div>
+    <div class="hero__glow hero__glow--lime"></div>
+
+    <!-- Watermark -->
+    <div class="hero__wm" aria-hidden="true">ROCKIT</div>
+
+    <div class="hero__layout">
+
+      <!-- LEFT -->
+      <div class="hero__content">
+
+        <div class="hero__tag" id="heroTag">
+          <span class="hero__tag-dot"></span>
+          Module 0 · Start — доступно зараз
+        </div>
+
+        <h1 class="hero__h1" id="heroTitle">
+          <span class="hero__line">Хочеш працювати</span>
+          <span class="hero__line">в&nbsp;<span class="hero__lime">affiliate?</span></span>
+          <span class="hero__line hero__line--accent">Починай&nbsp;тут.</span>
+        </h1>
+
+        <p class="hero__desc" id="heroDesc">
+          Модуль для HR, рекрутерів і всіх, хто заходить у медіабаїнг&nbsp;з&nbsp;нуля —
+          і хоче нарешті говорити з кандидатами та командою однією&nbsp;мовою.
+        </p>
+
+        <div class="hero__btns" id="heroBtns">
+          <a href="#programs" class="btn btn--lime">
+            Дивитись програми
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <a href="#curriculum" class="btn btn--ghost">Що всередині?</a>
+        </div>
+
+        <div class="hero__metrics" id="heroMetrics">
+          <div class="metric">
+            <span class="metric__n" data-count="500">0</span><span class="metric__plus">+</span>
+            <span class="metric__l">студентів</span>
+          </div>
+          <div class="metric__sep"></div>
+          <div class="metric">
+            <span class="metric__n">2</span><span class="metric__plus">год</span>
+            <span class="metric__l">контенту</span>
+          </div>
+          <div class="metric__sep"></div>
+          <div class="metric">
+            <span class="metric__n">$</span><span class="metric__n metric__n--lime" data-count="39">0</span>
+            <span class="metric__l">за модуль</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT — Visual -->
+      <div class="hero__visual" id="heroVisual">
+
+        <div class="hero__card-wrap">
+
+          <!-- Main card -->
+          <div class="hcard hcard--main">
+            <div class="hcard__top">
+              <span class="hcard__tag">MODULE 0</span>
+              <span class="hcard__price"><del>$99</del> <strong>$39</strong></span>
+            </div>
+            <div class="hcard__name">START</div>
+            <ul class="hcard__list">
+              <li><span class="hcard__check">✓</span>5 відеоуроків + Q&A</li>
+              <li><span class="hcard__check">✓</span>Структура індустрії</li>
+              <li><span class="hcard__check">✓</span>Термінологія: 40 термінів</li>
+              <li><span class="hcard__check">✓</span>Скрипт скринінгу</li>
+              <li><span class="hcard__check">✓</span>4 PDF-матеріали</li>
+            </ul>
+            <a href="https://aleksandrovnairina.github.io/rockitacademy/" target="_blank" class="hcard__btn">Купити за $39 →</a>
+          </div>
+
+          <!-- Floating badges -->
+          <div class="fbadge fbadge--1">
+            <svg viewBox="0 0 20 20" fill="none"><path d="M10 2L2 10H7L5 18L18 10H13L10 2Z" fill="#B5E726"/></svg>
+            Довічний доступ
+          </div>
+          <div class="fbadge fbadge--2">
+            <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="#7134E8" stroke-width="1.5"/><path d="M7 10L9 12L13 8" stroke="#7134E8" stroke-width="1.5" stroke-linecap="round"/></svg>
+            Telegram-бот
+          </div>
+
+        </div>
+
+        <!-- Background bolt -->
+        <svg class="hero__bolt-bg" viewBox="0 0 160 300" fill="none">
+          <path d="M105 8L18 158H72L55 292L142 142H88L105 8Z"
+            stroke="#B5E726" stroke-width="1.5" stroke-linejoin="round"
+            fill="rgba(181,231,38,0.04)" class="bolt-draw"/>
+        </svg>
+
+      </div>
+    </div>
+
+    <div class="hero__scroll-hint">
+      <div class="hero__scroll-line"></div>
+      <span>scroll</span>
+    </div>
+  </section>
+
+  <!-- ══════════ MARQUEE ══════════ -->
+  <div class="ticker">
+    <div class="ticker__fade ticker__fade--l"></div>
+    <div class="ticker__fade ticker__fade--r"></div>
+    <div class="ticker__track">
+      <div class="ticker__inner" id="ticker">
+        <span>AFFILIATE MARKETING</span><span class="t-sep">⚡</span>
+        <span>MEDIA BUYING</span><span class="t-sep">⚡</span>
+        <span>CPA NETWORKS</span><span class="t-sep">⚡</span>
+        <span>SOURCING</span><span class="t-sep">⚡</span>
+        <span>HR RECRUITMENT</span><span class="t-sep">⚡</span>
+        <span>ROCKIT ACADEMY</span><span class="t-sep">⚡</span>
+        <span>AFFILIATE MARKETING</span><span class="t-sep">⚡</span>
+        <span>MEDIA BUYING</span><span class="t-sep">⚡</span>
+        <span>CPA NETWORKS</span><span class="t-sep">⚡</span>
+        <span>SOURCING</span><span class="t-sep">⚡</span>
+        <span>HR RECRUITMENT</span><span class="t-sep">⚡</span>
+        <span>ROCKIT ACADEMY</span><span class="t-sep">⚡</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════ ABOUT ══════════ -->
+  <section class="section about" id="about">
+    <div class="wrap">
+
+      <div class="about__grid">
+        <div class="about__l">
+          <div class="label sr">Про академію</div>
+          <h2 class="h2 sr">
+            Ми навчаємо тих,<br/>
+            хто наймає <span class="lime">кращих</span>
+          </h2>
+          <p class="body-text sr">
+            Rockit Academy — освітня платформа для HR і рекрутерів, які хочуть впевнено закривати позиції в афіліат-індустрії. Ніякої води — тільки практика та інструменти, які можна застосувати завтра.
+          </p>
+          <p class="body-text sr">
+            Ми розкладаємо складну екосистему affiliate на зрозумілі блоки: від ролей команди до скрипту першого скринінгу.
+          </p>
+          <a href="#programs" class="btn btn--lime sr">Переглянути програми →</a>
+        </div>
+
+        <div class="about__r sr">
+          <div class="feat-cards">
+            <div class="fc fc--1">
+              <div class="fc__icon fc__icon--lime">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#B5E726" stroke-width="1.5" stroke-linejoin="round"/><path d="M2 17L12 22L22 17M2 12L12 17L22 12" stroke="#B5E726" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="fc__body">
+                <div class="fc__title">Структуровано</div>
+                <div class="fc__sub">Від основ до практики</div>
+              </div>
+            </div>
+            <div class="fc fc--2">
+              <div class="fc__icon fc__icon--purple">
+                <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="9" stroke="#7134E8" stroke-width="1.5"/><path d="M12 7V12L15.5 14" stroke="#7134E8" stroke-width="1.5" stroke-linecap="round"/></svg>
+              </div>
+              <div class="fc__body">
+                <div class="fc__title">2+ години</div>
+                <div class="fc__sub">Концентрованого контенту</div>
+              </div>
+            </div>
+            <div class="fc fc--3">
+              <div class="fc__icon fc__icon--lime">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="#B5E726" stroke-width="1.5" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="fc__body">
+                <div class="fc__title">Одразу в дію</div>
+                <div class="fc__sub">Скрипти та чеклісти</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════ FOR WHOM ══════════ -->
+  <section class="section for-whom dark-bg" id="for-whom">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="label sr">Для кого</div>
+        <h2 class="h2 sr">Ти впізнаєш себе?</h2>
+      </div>
+
+      <div class="personas">
+        <div class="persona sr" data-d="0">
+          <div class="persona__num">01</div>
+          <div class="persona__emoji">🎯</div>
+          <h3 class="persona__title">HR Generalist</h3>
+          <p class="persona__text">Хочеш перейти в affiliate-рекрутинг, але не знаєш, як оцінювати кандидатів</p>
+        </div>
+        <div class="persona sr" data-d="80">
+          <div class="persona__num">02</div>
+          <div class="persona__emoji">🔍</div>
+          <h3 class="persona__title">Рекрутер / Сорсер</h3>
+          <p class="persona__text">Не можеш скринити медіабаєрів і формулювати правильні запитання</p>
+        </div>
+        <div class="persona sr" data-d="160">
+          <div class="persona__num">03</div>
+          <div class="persona__emoji">🚀</div>
+          <h3 class="persona__title">Кар'єрний перехід</h3>
+          <p class="persona__text">Прийшов з маркетингу або продажів і розглядаєш affiliate як новий напрямок</p>
+        </div>
+        <div class="persona sr" data-d="240">
+          <div class="persona__num">04</div>
+          <div class="persona__emoji">⚡</div>
+          <h3 class="persona__title">Початківець HR</h3>
+          <p class="persona__text">Хочеш увійти в рекрутинг саме через affiliate-індустрію</p>
+        </div>
+        <div class="persona sr" data-d="320">
+          <div class="persona__num">05</div>
+          <div class="persona__emoji">🏢</div>
+          <h3 class="persona__title">In-House HR</h3>
+          <p class="persona__text">Потребуєш базової термінології, щоб говорити однією мовою з командою</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PROGRAMS ══════════ -->
+  <section class="section programs" id="programs">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="label sr">Програми</div>
+        <h2 class="h2 sr">Обери свій <span class="lime">старт</span></h2>
+      </div>
+
+      <div class="prog-grid">
+
+        <!-- FEATURED -->
+        <div class="prog prog--hot sr">
+          <div class="prog__glow"></div>
+          <div class="prog__ribbon">🔥 Популярне</div>
+          <div class="prog__top">
+            <span class="prog__mod">MODULE 0</span>
+            <div class="prog__pricing">
+              <del class="prog__old">$99</del>
+              <span class="prog__cur">$39</span>
+            </div>
+          </div>
+          <h3 class="prog__name">START</h3>
+          <p class="prog__desc">Хочеш в affiliate? Починай тут.</p>
+
+          <ul class="prog__feats">
+            <li><span class="chk">✓</span> 5 відеоуроків + Q&A сесія</li>
+            <li><span class="chk">✓</span> Структура індустрії: вертикалі, CPA, трафік</li>
+            <li><span class="chk">✓</span> Ролі команди: медіабаєр, фармер, аккаунт</li>
+            <li><span class="chk">✓</span> 40 ключових термінів + словник</li>
+            <li><span class="chk">✓</span> Скрипт першого скринінгу + чеклист</li>
+            <li><span class="chk">✓</span> 4 PDF-матеріали · Довічний доступ</li>
+          </ul>
+
+          <div class="prog__pills">
+            <span>⏱ 2 год</span>
+            <span>📱 Telegram</span>
+            <span>♾ Довічно</span>
+          </div>
+
+          <a href="https://aleksandrovnairina.github.io/rockitacademy/" target="_blank" class="btn btn--lime prog__btn">
+            Купити за $39
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+        </div>
+
+        <!-- COMING SOON STACK -->
+        <div class="prog-stack">
+
+          <div class="prog prog--soon sr" data-d="100">
+            <div class="prog__soon-tag">Скоро</div>
+            <div class="prog__top">
+              <span class="prog__mod">MODULE 1</span>
+            </div>
+            <h3 class="prog__name prog__name--sm">SOURCING</h3>
+            <p class="prog__desc">Де знайти медіабаєра і як не помилитись</p>
+            <ul class="prog__feats prog__feats--sm">
+              <li><span class="chk chk--p">✓</span> Boolean-пошук для affiliate</li>
+              <li><span class="chk chk--p">✓</span> Платформи та канали</li>
+              <li><span class="chk chk--p">✓</span> Оцінка портфоліо</li>
+            </ul>
+            <button class="btn btn--muted" disabled>В розробці</button>
+          </div>
+
+          <div class="prog prog--soon sr" data-d="200">
+            <div class="prog__soon-tag">Скоро</div>
+            <div class="prog__top">
+              <span class="prog__mod">MODULE 2</span>
+            </div>
+            <h3 class="prog__name prog__name--sm">INTERVIEW</h3>
+            <p class="prog__desc">Технічне інтерв'ю без технічного бекграунду</p>
+            <ul class="prog__feats prog__feats--sm">
+              <li><span class="chk chk--p">✓</span> 30+ запитань для медіабаєра</li>
+              <li><span class="chk chk--p">✓</span> Red flags та green flags</li>
+              <li><span class="chk chk--p">✓</span> Junior vs Mid vs Senior</li>
+            </ul>
+            <button class="btn btn--muted" disabled>В розробці</button>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CURRICULUM ══════════ -->
+  <section class="section curriculum dark-bg" id="curriculum">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="label sr">Програма Module 0</div>
+        <h2 class="h2 sr">Що всередині?</h2>
+      </div>
+
+      <div class="curric">
+        <div class="curric__item sr" data-d="0">
+          <div class="curric__n">01</div>
+          <div class="curric__body">
+            <h3>Структура індустрії</h3>
+            <p>Вертикалі, CPA-мережі та джерела трафіку. Як все пов'язано і де у цьому рекрутинг.</p>
+          </div>
+          <div class="curric__meta">
+            <span>20 хв</span><span>PDF гайд</span>
+          </div>
+        </div>
+        <div class="curric__item sr" data-d="60">
+          <div class="curric__n">02</div>
+          <div class="curric__body">
+            <h3>Команда та ролі</h3>
+            <p>Хто такий медіабаєр, фармер та аккаунт-менеджер. Як вони взаємодіють.</p>
+          </div>
+          <div class="curric__meta">
+            <span>20 хв</span><span>Карта ролей</span>
+          </div>
+        </div>
+        <div class="curric__item sr" data-d="120">
+          <div class="curric__n">03</div>
+          <div class="curric__body">
+            <h3>Термінологія</h3>
+            <p>40 ключових термінів. ROI, CTR, CR, EPC — простими словами без зайвого.</p>
+          </div>
+          <div class="curric__meta">
+            <span>15 хв</span><span>Словник + квіз</span>
+          </div>
+        </div>
+        <div class="curric__item sr" data-d="180">
+          <div class="curric__n">04</div>
+          <div class="curric__body">
+            <h3>Перший скринінг</h3>
+            <p>5 ключових питань, red flags та типові помилки рекрутера при роботі з affiliate-кандидатами.</p>
+          </div>
+          <div class="curric__meta">
+            <span>20 хв</span><span>Скрипт + чеклист</span>
+          </div>
+        </div>
+        <div class="curric__item sr" data-d="240">
+          <div class="curric__n">05</div>
+          <div class="curric__body">
+            <h3>Q&A Запис</h3>
+            <p>Відповіді на найчастіші запитання від HR. Реальні ситуації — реальні відповіді.</p>
+          </div>
+          <div class="curric__meta">
+            <span>45 хв</span><span>Запис сесії</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ RESULTS ══════════ -->
+  <section class="section results" id="results">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="label sr">Результати</div>
+        <h2 class="h2 sr">Після навчання<br/>ти зможеш</h2>
+      </div>
+
+      <div class="res-grid">
+        <div class="res sr" data-d="0">
+          <div class="res__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 5L5 24H17L13 43L43 24H31L24 5Z" fill="#B5E726"/></svg>
+          </div>
+          <p>Розуміти структуру affiliate-команди та точно описувати вакансії</p>
+        </div>
+        <div class="res sr" data-d="80">
+          <div class="res__icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="19" stroke="#7134E8" stroke-width="2"/><path d="M15 24L21 30L33 18" stroke="#7134E8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <p>Скринити медіабаєрів і ставити правильні запитання на інтерв'ю</p>
+        </div>
+        <div class="res sr" data-d="160">
+          <div class="res__icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="5" y="12" width="38" height="28" rx="4" stroke="#B5E726" stroke-width="2"/><path d="M17 12V8M31 12V8" stroke="#B5E726" stroke-width="2" stroke-linecap="round"/><path d="M5 22H43" stroke="#B5E726" stroke-width="2"/><path d="M15 32H33M15 27H27" stroke="#B5E726" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <p>Відрізняти junior від mid і senior без технічного бекграунду</p>
+        </div>
+        <div class="res sr" data-d="240">
+          <div class="res__icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M10 24C10 16.3 16.3 10 24 10" stroke="#7134E8" stroke-width="2" stroke-linecap="round"/><path d="M38 24C38 31.7 31.7 38 24 38" stroke="#B5E726" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="24" r="5" fill="#7134E8"/><circle cx="10" cy="24" r="2.5" fill="#7134E8"/><circle cx="38" cy="24" r="2.5" fill="#B5E726"/></svg>
+          </div>
+          <p>Говорити мовою affiliate та бути рівноправним партнером команди</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ TESTIMONIALS ══════════ -->
+  <section class="section reviews dark-bg">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="label sr">Відгуки</div>
+        <h2 class="h2 sr">Кажуть студенти</h2>
+      </div>
+
+      <div class="rev-grid">
+        <div class="rev sr" data-d="0">
+          <div class="rev__stars">★★★★★</div>
+          <p class="rev__text">"Нарешті зрозуміла, чим займається медіабаєр. Тепер можу нормально скринити кандидатів і не боятись технічних запитань."</p>
+          <div class="rev__author">
+            <div class="rev__av" style="--c: #B5E726">А</div>
+            <div>
+              <div class="rev__name">Аліна</div>
+              <div class="rev__role">HR Generalist, affiliate team</div>
+            </div>
+          </div>
+        </div>
+        <div class="rev sr" data-d="120">
+          <div class="rev__stars">★★★★★</div>
+          <p class="rev__text">"Пройшла за один вечір. Матеріал щільний, без води. Словник термінів — відкрила і зрозуміла половину вакансій, які раніше здавались китайською."</p>
+          <div class="rev__author">
+            <div class="rev__av" style="--c: #7134E8">М</div>
+            <div>
+              <div class="rev__name">Марина</div>
+              <div class="rev__role">Рекрутер, digital agency</div>
+            </div>
+          </div>
+        </div>
+        <div class="rev sr" data-d="240">
+          <div class="rev__stars">★★★★★</div>
+          <p class="rev__text">"Чеклист для скринінгу — це просто золото. Вже використовую на практиці і нарешті відчуваю себе впевнено на колах із кандидатами."</p>
+          <div class="rev__author">
+            <div class="rev__av" style="--c: #B5E726">К</div>
+            <div>
+              <div class="rev__name">Катерина</div>
+              <div class="rev__role">Talent Acquisition, CPA network</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FAQ ══════════ -->
+  <section class="section faq" id="faq">
+    <div class="wrap">
+      <div class="faq__grid">
+        <div class="faq__l">
+          <div class="label sr">FAQ</div>
+          <h2 class="h2 sr">Часті<br/>запитання</h2>
+          <p class="body-text sr">Не знайшов відповіді?<br/>Пиши — відповімо швидко.</p>
+          <a href="https://t.me/rockitacademy" target="_blank" class="btn btn--lime sr">Написати нам →</a>
+        </div>
+        <div class="faq__r">
+          <div class="faqi sr" data-d="0">
+            <button class="faqi__q">Чи потрібен технічний бекграунд?<span class="faqi__ic">+</span></button>
+            <div class="faqi__a"><p>Ні. Курс для тих, хто приходить з HR або рекрутингу без досвіду в affiliate. Пояснюємо з нуля, без технічних деталей.</p></div>
+          </div>
+          <div class="faqi sr" data-d="80">
+            <button class="faqi__q">Як відбувається навчання?<span class="faqi__ic">+</span></button>
+            <div class="faqi__a"><p>Після оплати отримуєш доступ через Telegram-бот. Відеоуроки, PDF та Q&A запис — навчайся у зручний час без дедлайнів.</p></div>
+          </div>
+          <div class="faqi sr" data-d="160">
+            <button class="faqi__q">На скільки вистачить доступу?<span class="faqi__ic">+</span></button>
+            <div class="faqi__a"><p>Доступ довічний. Повертайся до матеріалів коли завгодно та отримуй оновлення автоматично.</p></div>
+          </div>
+          <div class="faqi sr" data-d="240">
+            <button class="faqi__q">Чи є сертифікат?<span class="faqi__ic">+</span></button>
+            <div class="faqi__a"><p>Наразі ні. Але головний результат — практичні навички та інструменти, які застосовуєш одразу після курсу.</p></div>
+          </div>
+          <div class="faqi sr" data-d="320">
+            <button class="faqi__q">Можу повернути гроші?<span class="faqi__ic">+</span></button>
+            <div class="faqi__a"><p>Якщо курс не влаштував — напиши протягом 7 днів. Розглянемо кожен запит індивідуально.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ CTA ══════════ -->
+  <section class="cta-block dark-bg">
+    <div class="cta-block__orb"></div>
+    <div class="wrap">
+      <div class="cta-block__inner">
+        <div class="label sr" style="justify-content:center">Почни зараз</div>
+        <h2 class="cta-block__title sr">
+          Готовий стати<br/>
+          <span class="lime">affiliate-рекрутером?</span>
+        </h2>
+        <p class="cta-block__sub sr">
+          Module 0 — найшвидший спосіб увійти в індустрію<br/>
+          та почати говорити однією мовою з командою
+        </p>
+        <div class="cta-block__btns sr">
+          <a href="https://aleksandrovnairina.github.io/rockitacademy/" target="_blank" class="btn btn--lime btn--xl">
+            Купити Module 0 за $39
+            <svg viewBox="0 0 16 16" fill="none"><path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </a>
+          <div class="cta-block__note"><del>$99</del> — знижка 60% обмежена</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer__top">
+        <a href="#" class="logo">
+          <svg class="logo__bolt" viewBox="0 0 28 54" fill="none">
+            <path d="M18 2L4 28H13L10 52L24 26H15L18 2Z" fill="#B5E726"/>
+          </svg>
+          <span>ROCKIT<em>.</em>ACADEMY</span>
+        </a>
+        <nav class="footer__nav">
+          <a href="#about">Про нас</a>
+          <a href="#programs">Програми</a>
+          <a href="#for-whom">Для кого</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <div class="footer__soc">
+          <a href="https://t.me/rockitacademy" target="_blank" aria-label="Telegram" class="soc-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm5.94 8.19l-2.02 9.52c-.15.68-.54.85-1.08.53l-3-2.21-1.45 1.4c-.16.16-.3.3-.61.3l.21-3.04 5.5-4.97c.24-.21-.05-.33-.37-.12L6.84 14.3l-2.96-.92c-.64-.2-.65-.64.14-.95l11.57-4.46c.53-.2 1 .13.35.22z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/rockit.academy" target="_blank" aria-label="Instagram" class="soc-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer__bot">
+        <span>© 2025 Rockit Academy</span>
+        <span>Навчання рекрутерів в affiliate-індустрії</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
