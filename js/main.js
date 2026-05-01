@@ -111,6 +111,27 @@ const counterIO = new IntersectionObserver(entries => {
 const metrics = document.querySelector('.hero__metrics');
 if (metrics) counterIO.observe(metrics);
 
+/* ── Module "Що всередині?" toggle ─────── */
+document.querySelectorAll('.prog-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const targetId = btn.dataset.target;
+    const details  = document.getElementById(targetId);
+    const isOpen   = details.classList.contains('open');
+
+    // close all others
+    document.querySelectorAll('.prog__details.open').forEach(d => d.classList.remove('open'));
+    document.querySelectorAll('.prog-toggle.active').forEach(b => b.classList.remove('active'));
+
+    if (!isOpen) {
+      details.classList.add('open');
+      btn.classList.add('active');
+      setTimeout(() => {
+        details.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 100);
+    }
+  });
+});
+
 /* ── FAQ accordion ──────────────────────── */
 document.querySelectorAll('.faqi__q').forEach(btn => {
   btn.addEventListener('click', () => {
