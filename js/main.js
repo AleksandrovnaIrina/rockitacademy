@@ -151,12 +151,17 @@ if (typeof gsap !== 'undefined') {
     .to('#heroMetrics', { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, '-=0.55')
     .to('#heroVisual',  { opacity: 1, x: 0, duration: 1.0, ease: 'power3.out' }, '-=0.8');
 
-  /* Curriculum lines */
+  /* Curriculum lines — fromTo щоб не конфліктувати з .sr класом */
   gsap.utils.toArray('.curric__item').forEach((el, i) => {
-    gsap.from(el, {
-      scrollTrigger: { trigger: el, start: 'top 88%', once: true },
-      x: -24, opacity: 0, duration: 0.65, delay: i * 0.07, ease: 'power3.out',
-    });
+    gsap.fromTo(el,
+      { x: -24, opacity: 0 },
+      {
+        scrollTrigger: { trigger: el, start: 'top 90%', once: true },
+        x: 0, opacity: 1,
+        duration: 0.65, delay: i * 0.07, ease: 'power3.out',
+        onStart() { el.classList.add('in'); },
+      }
+    );
   });
 
   /* Parallax on hero glows */
